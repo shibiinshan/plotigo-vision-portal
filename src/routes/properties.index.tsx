@@ -4,18 +4,20 @@ import { PropertyListing } from "@/components/PropertyListing";
 import { CTASection } from "@/components/CTASection";
 
 type PropertySearch = {
-  location?: string;
-  type?: string;
-  budget?: string;
-  status?: string;
+  location: string | undefined;
+  type: string | undefined;
+  budget: string | undefined;
+  status: string | undefined;
 };
+
+const str = (v: unknown) => (typeof v === "string" && v.length > 0 ? v : undefined);
 
 export const Route = createFileRoute("/properties/")({
   validateSearch: (search: Record<string, unknown>): PropertySearch => ({
-    location: typeof search.location === "string" ? search.location : undefined,
-    type: typeof search.type === "string" ? search.type : undefined,
-    budget: typeof search.budget === "string" ? search.budget : undefined,
-    status: typeof search.status === "string" ? search.status : undefined,
+    location: str(search["location"]),
+    type: str(search["type"]),
+    budget: str(search["budget"]),
+    status: str(search["status"]),
   }),
   head: () => ({
     meta: [
