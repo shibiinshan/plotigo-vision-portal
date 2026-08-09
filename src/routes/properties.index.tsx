@@ -4,21 +4,23 @@ import { PropertyListing } from "@/components/PropertyListing";
 import { CTASection } from "@/components/CTASection";
 
 type PropertySearch = {
-  location: string | undefined;
-  type: string | undefined;
-  budget: string | undefined;
-  status: string | undefined;
+  location?: string;
+  type?: string;
+  budget?: string;
+  status?: string;
 };
 
-const str = (v: unknown) => (typeof v === "string" && v.length > 0 ? v : undefined);
+const keys = ["location", "type", "budget", "status"] as const;
 
 export const Route = createFileRoute("/properties/")({
-  validateSearch: (search: Record<string, unknown>): PropertySearch => ({
-    location: str(search["location"]),
-    type: str(search["type"]),
-    budget: str(search["budget"]),
-    status: str(search["status"]),
-  }),
+  validateSearch: (search: Record<string, unknown>): PropertySearch => {
+    const out: PropertySearch = {};
+    for (const key of keys) {
+      const value = search[key];
+      if (typeof value === "string" && value.length > 0) out[key] = value;
+    }
+    return out;
+  },
   head: () => ({
     meta: [
       { title: "Explore Properties in Kochi & Kerala | Plotigo" },
