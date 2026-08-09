@@ -26,7 +26,7 @@ const reasons = [
 
 export function WhyPlotigo() {
   return (
-    <section className="relative overflow-hidden bg-ink py-20 text-background lg:py-28">
+    <section className="relative overflow-hidden bg-[linear-gradient(135deg,#111827_0%,#1b2a3d_100%)] py-20 text-background lg:py-28">
       <div className="pointer-events-none absolute inset-0 blueprint-grid-dark" aria-hidden="true" />
       <div className="relative mx-auto max-w-7xl px-5 lg:px-8">
         <div className="grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:gap-20">

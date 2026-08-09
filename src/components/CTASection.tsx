@@ -5,7 +5,7 @@ import { generalWhatsapp } from "@/lib/plotigo";
 export function CTASection() {
   return (
     <section className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
-      <div className="relative overflow-hidden rounded-2xl bg-ink px-6 py-16 text-background sm:px-12 lg:px-20 lg:py-24">
+      <div className="relative overflow-hidden rounded-[1.75rem] bg-[linear-gradient(135deg,#101827_0%,#18302b_100%)] px-6 py-16 text-background shadow-[var(--shadow-float)] sm:px-12 lg:px-20 lg:py-24">
         <div className="pointer-events-none absolute inset-0 blueprint-grid-dark" aria-hidden="true" />
         <span
           className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-lime/15 blur-2xl"

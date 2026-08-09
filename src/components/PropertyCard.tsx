@@ -14,7 +14,7 @@ export function PropertyCard({ property, showWhatsapp = true }: { property: Prop
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.45, ease: "easeOut" }}
-      className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:border-lime"
+      className="group flex flex-col overflow-hidden rounded-[1.25rem] border border-border/80 bg-card/90 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:border-lime/70 hover:shadow-[0_24px_70px_-26px_rgba(69,138,82,0.35)]"
     >
       <div className="relative aspect-[4/3] overflow-hidden bg-muted">
         <img

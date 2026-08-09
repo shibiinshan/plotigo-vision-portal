@@ -6,7 +6,7 @@ import { generalWhatsapp } from "@/lib/plotigo";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden bg-[linear-gradient(135deg,rgba(253,251,244,0.96),rgba(243,248,241,0.96))]">
       <div className="pointer-events-none absolute inset-0 blueprint-grid" aria-hidden="true" />
       <div
         className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full border border-lime/30"
@@ -19,12 +19,12 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <p className="eyebrow inline-flex items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 text-muted-foreground">
+            <p className="eyebrow inline-flex items-center gap-2 rounded-full border border-lime/30 bg-card/80 px-3.5 py-1.5 text-muted-foreground backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-lime" aria-hidden="true" />
               Kerala Property Experts
             </p>
 
-            <h1 className="mt-6 font-display text-[2.6rem] font-extrabold leading-[1.02] sm:text-6xl lg:text-[4.2rem]">
+            <h1 className="mt-6 font-display text-[2.6rem] font-extrabold leading-[1.02] text-foreground sm:text-6xl lg:text-[4.2rem]">
               Your Right Property
               <br />
               Starts With The{" "}
@@ -45,7 +45,7 @@ export function Hero() {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link
                 to="/properties"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-7 py-3.5 text-sm font-bold text-background transition-transform hover:scale-[1.02]"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-7 py-3.5 text-sm font-bold text-background shadow-[0_18px_45px_-20px_rgba(12,24,31,0.5)] transition-transform hover:scale-[1.02]"
               >
                 Explore Properties
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -54,7 +54,7 @@ export function Hero() {
                 href={generalWhatsapp}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-ink px-7 py-3.5 text-sm font-bold transition-colors hover:bg-lime hover:border-lime"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-ink/15 bg-background/70 px-7 py-3.5 text-sm font-bold text-foreground transition-colors hover:border-lime hover:bg-lime hover:text-lime-foreground"
               >
                 <MessageCircle className="h-4 w-4" aria-hidden="true" />
                 Talk to an Expert
@@ -73,7 +73,7 @@ export function Hero() {
             transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
             className="relative"
           >
-            <div className="relative overflow-hidden rounded-xl border border-border bg-card">
+            <div className="relative overflow-hidden rounded-[1.6rem] border border-border/80 bg-card shadow-[var(--shadow-float)] ring-1 ring-black/5">
               <img
                 src={heroImg}
                 alt="Premium residential tower in Kochi, Kerala"
@@ -84,7 +84,7 @@ export function Hero() {
               />
             </div>
 
-            <div className="absolute -bottom-6 left-4 w-[16.5rem] rounded-lg border border-border bg-card p-4 shadow-[var(--shadow-float)] sm:left-auto sm:-left-8">
+            <div className="absolute -bottom-6 left-4 w-[16.5rem] rounded-2xl border border-border/80 bg-background/95 p-4 shadow-[var(--shadow-float)] backdrop-blur sm:left-auto sm:-left-8">
               <p className="eyebrow text-muted-foreground">Featured Property</p>
               <p className="mt-2 font-display text-lg font-extrabold leading-tight">RDS Echo, Elamakkara</p>
               <p className="mt-1 flex items-center gap-1.5 text-xs text-muted-foreground">

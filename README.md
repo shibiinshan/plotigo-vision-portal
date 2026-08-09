@@ -148,7 +148,7 @@ Price: ₹1.40 Cr
 
 Status: For Sale
 
-2. Premium Residential Plot
+1. Premium Residential Plot
 
 Location: Edappally, Kochi
 
@@ -160,7 +160,7 @@ Price: ₹78 Lakhs
 
 Status: For Sale
 
-3. Premium Villa
+1. Premium Villa
 
 Location: Kakkanad, Kochi
 

@@ -40,7 +40,7 @@ export function LocationSection() {
           </ul>
         </div>
 
-        <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-border bg-card blueprint-grid">
+        <div className="relative aspect-[4/3] overflow-hidden rounded-[1.45rem] border border-border/80 bg-card/90 shadow-[var(--shadow-card)] blueprint-grid">
           <svg
             className="absolute inset-0 h-full w-full text-muted-foreground/25"
             viewBox="0 0 400 300"

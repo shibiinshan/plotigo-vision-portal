@@ -1,9 +1,16 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, MessageCircle, Mail, Phone } from "lucide-react";
+import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
 import { PLOTIGO, generalWhatsapp } from "@/lib/plotigo";
 
 export function Footer() {
+  const [year, setYear] = useState("—");
+
+  useEffect(() => {
+    setYear(new Date().getFullYear().toString());
+  }, []);
+
   return (
     <footer className="relative overflow-hidden bg-ink text-background">
       <div className="pointer-events-none absolute inset-0 blueprint-grid-dark" aria-hidden="true" />
@@ -79,7 +86,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-2 border-t border-background/10 pt-6 text-xs text-background/45 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Plotigo.in — All rights reserved.</p>
+          <p>© {year} Plotigo.in — All rights reserved.</p>
           <p>Listings shown are indicative samples pending verification.</p>
         </div>
       </div>

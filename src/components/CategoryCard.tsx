@@ -18,7 +18,7 @@ export function CategoryCard({
   return (
     <Link
       to={to}
-      className="group relative flex flex-col justify-between overflow-hidden rounded-lg border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-ink"
+      className="group relative flex flex-col justify-between overflow-hidden rounded-[1.25rem] border border-border/80 bg-card/90 p-6 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:border-lime/70 hover:shadow-[0_20px_55px_-28px_rgba(69,138,82,0.35)]"
     >
       <span className="pointer-events-none absolute inset-0 blueprint-grid opacity-60" aria-hidden="true" />
       <span className="relative grid h-12 w-12 place-items-center rounded-md bg-secondary text-foreground transition-colors group-hover:bg-lime">
