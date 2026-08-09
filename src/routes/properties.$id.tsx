@@ -50,7 +50,6 @@ function PropertyDetail() {
       <div className="mx-auto max-w-7xl px-5 pt-8 lg:px-8">
         <Link
           to="/properties"
-          search={{ location: undefined, type: undefined, budget: undefined, status: undefined }}
           className="inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground"
         >
           <ArrowLeft className="h-4 w-4" aria-hidden="true" /> All properties

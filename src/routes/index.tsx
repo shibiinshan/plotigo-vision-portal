@@ -80,7 +80,6 @@ function Index() {
           </div>
           <Link
             to="/properties"
-            search={{ location: undefined, type: undefined, budget: undefined, status: undefined }}
             className="inline-flex shrink-0 items-center gap-1.5 text-sm font-bold underline-offset-4 hover:underline"
           >
             View all properties <ArrowRight className="h-4 w-4" aria-hidden="true" />

@@ -29,7 +29,7 @@ export function LocationSection() {
               <li key={m.name}>
                 <Link
                   to="/properties"
-                  search={{ location: m.name, type: undefined, budget: undefined, status: undefined }}
+                  search={{ location: m.name }}
                   className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-4 py-2 text-sm font-semibold transition-colors hover:border-lime hover:bg-lime"
                 >
                   <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
