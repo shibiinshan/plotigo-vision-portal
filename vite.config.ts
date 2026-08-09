@@ -2,8 +2,9 @@ import { defineConfig } from "vite";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
-import react from "@vitejs/plugin-react";
+import viteReact from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
+import { nitro } from "nitro/vite";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -12,18 +13,11 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "src"),
     },
-    tsconfigPaths: true,
   },
   plugins: [
     tailwindcss(),
-    tanstackStart({
-      // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
-      // nitro/vite builds from this
-      server: { entry: "server" },
-      nitro: {
-        preset: "vercel",
-      },
-    }),
-    react(),
+    tanstackStart(),
+    nitro({ preset: "vercel" }),
+    viteReact(),
   ],
 });
